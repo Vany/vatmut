@@ -12,9 +12,9 @@ public class AlchemicalFuel extends Item {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public AlchemicalFuel(Properties properties, int fuel) {
-        super(properties.maxStackSize(64).group(VatmutMod.ITEM_GROUP));
+        super(properties.group(VatmutMod.VatmutItemGroup.instance));
         this.fuel = fuel;
-        LOGGER.info("]]] Fuel constructed");
+        LOGGER.info("[[[XXX]]] Fuel constructed");
     }
 
     @Override
