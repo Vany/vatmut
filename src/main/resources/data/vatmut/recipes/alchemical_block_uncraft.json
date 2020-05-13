@@ -1,0 +1,13 @@
+{
+
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vatmut:alchemical_block"
+    }
+  ],
+  "result": {
+    "item": "vatmut:alchemical_fuel",
+    "count": 9
+  }
+}
