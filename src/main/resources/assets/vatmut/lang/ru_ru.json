@@ -1,3 +1,4 @@
 {
-	"item.vatmut.alchemical_fuel": "Алхимическое Топливо"
+	"item.vatmut.alchemical_fuel": "Алхимическое Топливо",
+	"block.vatmut.alchemical_block": "Блок Алхимического Топлива"
 }
