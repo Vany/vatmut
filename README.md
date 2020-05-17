@@ -15,8 +15,8 @@ Main idea is to utilize and store enormous amounts of energy in material items. 
  * alchemical Fuel Block
  
 ## Roadmap
-[ ] Machines
-[ ] Alchemical fuel producer
-[ ] Alchemical fuel consumer
-[ ] Teleportation Enchant
-[ ] Teleportation enchant energizer
+ - [ ] Machines
+ - [ ] Alchemical fuel producer
+ - [ ] Alchemical fuel consumer
+ - [ ] Teleportation Enchant
+ - [ ] Teleportation enchant energizer
