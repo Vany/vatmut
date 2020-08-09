@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, VatmutMod.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VatmutMod.MOD_ID);
 
     public static final RegistryObject<Item> ALCHEMICAL_FUEL = ITEMS.register("alchemical_fuel",
             () -> new AlchemicalFuel(new Item.Properties().group(VatmutItemGroup.instance), 1000));

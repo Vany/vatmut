@@ -1,34 +1,21 @@
 package com.vany.vatmut;
 
-import com.vany.vatmut.items.AlchemicalFuel;
-import mcp.MethodsReturnNonnullByDefault;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.LogBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
 
 @Mod(VatmutMod.MOD_ID)
 @Mod.EventBusSubscriber(modid = VatmutMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -58,23 +45,23 @@ public class VatmutMod {
         ModBlocks.BLOCKS.getEntries().stream() //.filter(block -> !(block.get() instanceof ExampleCrop))
                 .map(RegistryObject::get)
                 .forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(VatmutItemGroup.instance);
-            final BlockItem blockItem = new BlockItem(block, properties);
-            blockItem.setRegistryName(block.getRegistryName());
-            registry.register(blockItem);
-        });
+                    final Item.Properties properties = new Item.Properties().group(VatmutItemGroup.instance);
+                    final BlockItem blockItem = new BlockItem(block, properties);
+                    blockItem.setRegistryName(block.getRegistryName());
+                    registry.register(blockItem);
+                });
 
         LOGGER.debug("Registered BlockItems!");
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
+    private void setup(final FMLCommonSetupEvent event) {
         LOGGER.info("Initializing vatmut");
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(FMLServerStartingEvent event) { }
+    public void onServerStarting(FMLServerStartingEvent event) {
+    }
 
     public static class VatmutItemGroup extends ItemGroup {
         public static final ItemGroup instance = new VatmutItemGroup(ItemGroup.GROUPS.length, "VATMUT");
@@ -88,7 +75,6 @@ public class VatmutMod {
             return new ItemStack(ModItems.ALCHEMICAL_FUEL.get());
         }
     }
-
 
 
 }
