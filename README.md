@@ -8,3 +8,15 @@ This mod developed to enhance [All The Mods 5](https://www.curseforge.com/minecr
 
 It contains Alchemical fuel as super fuel resource and alchemical empowerer as a machine to produce it. And alchemical generator as way to return energy. 
 Main idea is to utilize and store enormous amounts of energy in material items. All energy equilibrium is built on top of maximum infused `rftools:coal_generator`.
+
+
+## Contains
+ * Anchemical Fuel
+ * alchemical Fuel Block
+ 
+## Roadmap
+ - [ ] Machines
+ - [ ] Alchemical fuel producer
+ - [ ] Alchemical fuel consumer
+ - [ ] Teleportation Enchant
+ - [ ] Teleportation enchant energizer
